@@ -1,5 +1,14 @@
 #include <stdio.h>
-/*initializing main with void*/
+
+/**
+ *
+ *  * main - Entry point
+ *
+ *   
+ *
+ *    * Return: Always 0 (Success)
+ *
+ *     */
 int main (void)
 {
 	/*initializing string array*/
