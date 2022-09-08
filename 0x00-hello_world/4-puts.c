@@ -1,19 +1,15 @@
 #include <stdio.h>
 
 /**
- *
- *  * main - Entry point
- *
- *   
- *
+ *  * main - printing
  *    * Return: Always 0 (Success)
- *
- *     */
-int main (void)
+ */
+int main(void)
+
 {
-	/*initializing string array*/
-	char str[] = "Programming is like building a multilingual puzzle";
-	/*writing to stdout*/
+	char str[] = "Programming is like building a multilingual puzzle"
+
 	puts(str);
+
 	return (0);
 }
