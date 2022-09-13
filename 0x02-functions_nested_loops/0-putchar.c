@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main- pprints -putchar, followed by new line
  * Return: always return 0
