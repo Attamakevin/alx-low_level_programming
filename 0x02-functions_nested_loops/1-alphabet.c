@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  *function - prints the letters of alphabets in lower case
