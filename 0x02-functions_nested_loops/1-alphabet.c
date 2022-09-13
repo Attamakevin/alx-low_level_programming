@@ -3,15 +3,15 @@
  *function - prints the letters of alphabets in lower case
  * Return:return ch
  */
-void print_alphabet(void);
+void print_alphabet(void)
 {
 	char ch = 'a';
 
 	for (ch = 'a'; ch <= 'z';)
 	{
-	putchar(ch);
+	_putchar(ch);
 	ch++;
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (ch);
 }
