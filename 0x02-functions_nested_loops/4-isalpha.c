@@ -5,7 +5,7 @@
  *  Return: 0
  */
 int _isalpha(int c)
-	_isalpha(int c) = c
+	int _isalpha(int c) = c
 
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && C <= 'Z'))
