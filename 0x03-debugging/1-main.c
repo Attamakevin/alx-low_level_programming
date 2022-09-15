@@ -9,12 +9,7 @@ int main(void)
 
 	printf("Infinite loop incoming :(\n");
 	i = 0;
-	while (i < 10)
-		/**
-		 * since i = 0 is always less than 10,
-		 *the loop will contiue in infinite loop
-		 *the i should be incremented
-		 */
+	/*while (i < 10)*/
 	{
 		putchar(i)
 	}
