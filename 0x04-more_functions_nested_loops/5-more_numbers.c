@@ -9,12 +9,12 @@ void more_numbers(void)
 	int a;
 
 	while (a <= 10)
-		a++
+		a++;
 	{
 		if (num == 0, num <= 14)
 		{
 			_putchar(num);
-			num++
+			num++;
 		}
 		_putchar('\n');
 	}
