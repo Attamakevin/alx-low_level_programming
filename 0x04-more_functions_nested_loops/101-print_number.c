@@ -20,7 +20,8 @@ void print_number(int n)
 	if (Z > 0)
 		while (Z / 10 != 0)
 		{
-			Z /= 10, c *= 10;
+			_putchar(Z % 10);
+			c *= 10;
 				while (c > 0)
 				{
 					h = n / c;
