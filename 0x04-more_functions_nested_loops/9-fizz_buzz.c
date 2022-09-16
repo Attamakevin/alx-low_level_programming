@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
  * main - FizzBuzz
  * Description: prints the numbers 1 - 100 w/
@@ -9,6 +11,7 @@
 int main(void)
 {
 	int i;
+	int BUZZ, FIZZ, FIZZBUZZ;
 
 	for (i = 1; i <= 100; i++)
 	{
@@ -19,10 +22,10 @@ int main(void)
 	else if (i % 5 == 0)
 	printf("Buzz");
 	else
-	printf("%i", i);
+	_putchar(i % 10);
 	if (i < 100)
-	printf(" ");
+	_putchar(' ');
 	}
-	printf("\n");
+	_putchar('\n');
 	return (0);
 }
