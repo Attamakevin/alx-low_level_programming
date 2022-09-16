@@ -2,20 +2,19 @@
 /**
  * more_numbers - prints numbers from 0-14 10 times
  * Return: void
- */
+*/
 void more_numbers(void)
 {
-	int num;
-	int a;
+	int i, j;
 
-	while (a <= 10)
-		a++;
+	for (i = 1; i <= 10; i++)
 	{
-		if (num == 0, num <= 14)
-		{
-			_putchar(num);
-			num++;
-		}
-		_putchar('\n');
+	for (j = 0; j < 15; j++)
+	{
+	if (j >= 10)
+	_putchar('1');
+	_putchar(j % 10 + '0');
+	}
+	_putchar('\n');
 	}
 }
