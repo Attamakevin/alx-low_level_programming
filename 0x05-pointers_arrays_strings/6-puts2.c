@@ -35,11 +35,7 @@ int longi = 0;
 
 	if (o % 2 == 0)
 
-	{
-
 		_putchar(str[o]);
-
-	}
 
 	}
 }
