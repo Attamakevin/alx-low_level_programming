@@ -6,20 +6,33 @@
 * Return: dest
 */
 char *_strcpy(char *dest, char *src)
+
 {
-	int i = 0;
-	int n = src[i] + 1;
+
+	int l = 0;
+
+	int x = 0;
 
 
-	for (i = 0; i < n; i++)
+
+	while (*(src + l) != '\0')
+
 	{
-	if ((src[i] + 1) != '\0')
-		i++;
+
+		l++;
+
 	}
-	for (; i < n; i++)
+
+	for ( ; x < l ; x++)
+
 	{
-	dest[i] = src[i];
-	dest[i] = '\0';
+
+		dest[x] = src[x];
+
 	}
-return (dest);
+
+	dest[l] = '\0';
+
+	return (dest);
+
 }
