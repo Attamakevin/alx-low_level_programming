@@ -6,16 +6,14 @@
 */
 void print_number(int n)
 {
-	int m;
+	int m = n;
 
-	while (m != 0)
 	if (m < 0)
 	{
-	n = n * m;
-	_putchar(n);
+	_putchar(-m);
 	}
 	else
 	{
-	_putchar(n % 10 + '0');
+	_putchar(m % 10 + '0');
 	}
 }
