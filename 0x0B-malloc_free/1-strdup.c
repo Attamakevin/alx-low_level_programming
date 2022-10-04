@@ -21,8 +21,8 @@ char *_strdup(char *str)
 		len++;
 		i++;
 	}
-	duplicate_str = malloc(sizeof(char) * len);
 	len++;
+	duplicate_str = malloc(sizeof(char) * len);
 	if (duplicate_str == NULL)
 		return (NULL);
 	i = 0;
