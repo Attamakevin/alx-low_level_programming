@@ -26,22 +26,20 @@ char *str_concat(char *s1, char *s2)
 	len1 = 0, i = 0;
 	while (*(s1 + i))
 		len1++, i++;
-
 	len2 = 0, j = 0;
 	while (*(s2 + j))
 		len2++, j++;
-
 	len2++;
 	concate = malloc(sizeof(char) * (len1 + len2));
 	if (concate == NULL)
-		return (NULL);
+		return ("");
 	i = 0, j = 0;
 	while (i < len1)
 	{
 		*(concate + i) = *(s1 + i);
 		i++;
 	if ((s1 + i) == NULL)
-	return (NULL);
+	return ("");
 	}
 	j = 0;
 	while (j < len2)
@@ -52,5 +50,5 @@ char *str_concat(char *s1, char *s2)
 	if ((s2 + j) == NULL)
 	return (NULL);
 	}
-	return (concate);
+return (concate);
 }
