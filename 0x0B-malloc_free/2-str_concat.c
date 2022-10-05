@@ -15,9 +15,9 @@ char *str_concat(char *s1, char *s2)
 	int len1, len2, i, j;
 
 	if (s1 == NULL)
-	return "";
+	return (" ");
 	if (s2 == NULL)
-	return "";
+	return (" ");
 	len1 = 0;
 	i = 0;
 	while (*(s1 + i))
@@ -40,12 +40,16 @@ char *str_concat(char *s1, char *s2)
 	{
 		*(concate + i) = *(s1 + i);
 		i++;
+	if ((s1 + i) == NULL)
+	return (NULL);
 	}
 	j = 0;
 	while (j < len2)
 	{
 		*(concate + i) = *(s2 + j);
 		i++;
+	if ((s2 + j) = NULL)
+	return (NULL);
 		j++;
 	}
 	return (concate);
