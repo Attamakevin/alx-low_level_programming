@@ -51,14 +51,14 @@ char **strtow(char *str)
 			n = 0;
 			while (str[n] != ' ')
 				n++;
-			strDup[i] = malloc(sizeof(char) * n);
+			/*strDup[i] = malloc(sizeof(char) * n);
 			if (strDup[i] == NULL)
 			{
 				while (--i >= 0)
 					free(strDup[--i]);
 				free(strDup);
 				return (NULL);
-			}
+			}*/
 			m = 0;
 			while (m < n)
 			{
