@@ -48,7 +48,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		*(concate + i) = *(s2 + j);
 		i++;
-	if ((s2 + j) = NULL)
+	if ((s2 + j) == NULL)
 	return (NULL);
 		j++;
 	}
