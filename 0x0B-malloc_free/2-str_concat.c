@@ -18,15 +18,17 @@ char *str_concat(char *s1, char *s2)
 	return (" ");
 	if (s2 == NULL)
 	return (" ");
-	len1 = 0;
-	i = 0;
+
+	len1 = 0, i = 0;
 	while (*(s1 + i))
 		len1++;
 		i++;
+
 	len2 = 0, j = 0;
 	while (*(s2 + j))
 		len2++;
 		j++;
+
 	len2++;
 	concate = malloc(sizeof(char) * (len1 + len2));
 	if (concate == NULL)
