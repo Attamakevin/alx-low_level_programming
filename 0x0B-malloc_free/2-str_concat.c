@@ -40,17 +40,14 @@ char *str_concat(char *s1, char *s2)
 	{
 		*(concate + i) = *(s1 + i);
 		i++;
-	if ((s1 + i) == NULL)
-	return (NULL);
 	}
 	j = 0;
 	while (j < len2)
 	{
 		*(concate + i) = *(s2 + j);
 		i++;
-	if ((s2 + j) == NULL)
-	return (NULL);
 		j++;
 	}
+	*(concate + i) == '\0';	
 	return (concate);
 }
