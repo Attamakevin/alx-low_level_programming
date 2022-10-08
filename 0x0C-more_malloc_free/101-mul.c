@@ -13,7 +13,7 @@ int _isdigit(char *s);
  */
 int main(int argc, char *argv[])
 {
-	int i, int num1, int num2;
+	int i;
 
 	if (argc != 3)
 	{
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	if (_isdigit(argv[1]) == 0)
-		printf("%d\n", atoi(argv[num1]) * atoi(argv[num2]));
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 
 	return (0);
 }
