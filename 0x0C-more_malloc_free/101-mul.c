@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	if (_isdigit(argv[1]) == 0)
-		printf("%d\n", (argv[1]) * (argv[2]));
+		printf("%s\n", atoi(argv[1]) * atoi(argv[2]));
 
 	return (0);
 }
