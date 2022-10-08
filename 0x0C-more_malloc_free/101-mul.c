@@ -24,12 +24,12 @@ int main(int argc, char *argv[])
 	}
 	if (_isdigit(argv[1]) == 0)
 		printf("%s\n", argv[1]);
-		
+
 	return (0);
 }
 
 /**
- * isdigit - checks if string is a number or not
+ * _isdigit - checks if string is a number or not
  * @s: the string to be checked
  * Return: 1 if true, else 0.
  */
