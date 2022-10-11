@@ -6,12 +6,14 @@
  * @str: string
  * Return: length
  */
-int len(char str)
+int len(char *str)
 {
 	int i;
 
-	for (i = 0; i != '\0'; i++)
-		
+	i = 0;
+	while (*str != '\0')
+		i++;
+		*str++;
 	return (i);
 }
 /**
