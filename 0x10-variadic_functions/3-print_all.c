@@ -1,51 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-
-/**
- * print_char - prints char
- * @valist: valist
- */
-void print_char(va_list valist)
-{
-	printf("%c", va_arg(valist, int));
-}
-
-/**
- * print_int - prints int
- * @valist: valist
- */
-void print_int(va_list valist)
-{
-	printf("%d", va_arg(valist, int));
-}
-
-/**
- * print_float - prints float
- * @valist: valist
- */
-void print_float(va_list valist)
-{
-	printf("%f", va_arg(valist, double));
-}
-
-/**
- * print_string - prints string
- * @valist: valist
- */
-void print_string(va_list valist)
-{
-	char *s;
-
-	s = va_arg(valist, char *);
-
-	if (s == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", s);
-}
+#include <string.h>
 
 /**
  * print_all - print varying input of ints, chars, floats, and strings
@@ -53,32 +9,37 @@ void print_string(va_list valist)
  */
 void print_all(const char * const format, ...)
 {
-	char *separator = "";
-	int i, j = 0
-	va_list valist;
+	int num_arg = strlen(format);
+	va_list args;
 
-	datatype choice[] = { {'c', print_char},
-			      {'i', print_int},
-			      {'f', print_float},
-			      {'s', print_string},
-			      {'\0', NULL} };
-	/* iterate format; if datatype matched, access function via struct */
-	va_start(valist, format);
-	while (format != NULL && format[j] != '\0')
+	va_start(args, format);
+	for (i = 0; i < num_args; i++)
 	{
-		i = 0;
-		while (choice[i].letter != '\0')
+		if (format[i] == 'c')
 		{
-			if (choice[i].letter == format[j])
-			{
-				printf("%s", separator);
-				choice[i].func(valist); /*access va_arg later*/
-				separator = ", ";
-			}
-			i++;
+			char x = va_arg(args, char);
+			printf("%c", x);
 		}
-		j++;
-	}
-	va_end(valist);
+		else if (format[i] == 'i')
+		{
+			int x = va_arg(args, int);
+			printf("%d", x);
+		}
+		else if (format[i] == 'f')
+		{
+			double x = va_arg(args, double);
+			printf("%f", x);
+		}
+		else if (format[i] == 's')
+		{
+			char str = va_arg(args, char *);
+			printf("%s", str);
+				if (str == NULL)
+					printf("(nil)");
+		}
+		else 
+		{
+			return (NULL);
+		}
 	printf("\n");
 }
