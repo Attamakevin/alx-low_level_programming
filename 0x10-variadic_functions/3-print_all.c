@@ -1,49 +1,181 @@
 #include "variadic_functions.h"
-#include <stdio.h>
+
 #include <stdarg.h>
-#include <string.h>
+
+#include <stdio.h>
+
+
 
 /**
- * print_all - print varying input of ints, chars, floats, and strings
- * @format: an array of chars signifying which data type to print
- */
-void print_all(const char * const format, ...)
-{
-	va_list args;
-	int num_args = strlen(format);
-	int i;
-	char *str;
 
-	va_start(args, format);
-	for (i = 0; i < num_args; i++)
+ * print_all - prints anything.
+
+ * @format: is a list of types of arguments passed to the function.
+
+ *
+
+ * Return: void
+
+ */
+
+
+
+void print_all(const char * const format, ...)
+
+{
+
+	va_list valist;
+
+	int j = 0, i = 0;
+
+	char *sep = "";
+
+	my_form forms[] = {
+
+		{"c", print_achar},
+
+		{"i", print_anint},
+
+		{"f", print_afloat},
+
+		{"s", print_achar_arr},
+
+	};
+
+
+
+	va_start(valist, format);
+
+
+
+	while (format != NULL && format[i] != '\0')
+
 	{
-		if (format[i] == 'c')
+
+		j = 0;
+
+		while (j < 4)
+
 		{
-			char x = va_arg(args, int);
-			printf("%c", x);
+
+			if (format[i] == *forms[j].c)
+
+			{
+
+				printf("%s", sep);
+
+				forms[j].f(&valist);
+
+				sep = ", ";
+
+				break;
+
+			}
+
+			j++;
+
 		}
-		else if (format[i] == 'i')
-		{
-			int x = va_arg(args, int);
-			printf("%d", x);
-		}
-		else if (format[i] == 'f')
-		{
-			double x = va_arg(args, double);
-			printf("%f", x);
-		}
-		else if (format[i] == 's')
-		{
-			str = va_arg(args, char *);
-			printf("%s", str);
-				if (str == NULL)
-					printf("(nil)");
-		}
-		else 
-		{
-			continue;
-		}
-	va_end(args);
-	printf("\n");
+
+		i++;
+
 	}
+
+	va_end(valist);
+
+	printf("\n");
+
+}
+
+
+
+/**
+
+ * print_achar - prints the next char in a va_list
+
+ * @valist: the working va_list.
+
+ * Return: void.
+
+ */
+
+void print_achar(va_list *valist)
+
+{
+
+	printf("%c", va_arg(*valist, int));
+
+}
+
+
+
+/**
+
+ * print_anint - prints the next integer vaue in a va_list
+
+ * @valist: the working va_list.
+
+ * Return: void.
+
+ */
+
+void print_anint(va_list *valist)
+
+{
+
+	printf("%d", va_arg(*valist, int));
+
+}
+
+
+
+/**
+
+ * print_afloat - prints the next float value in a va_list
+
+ * @valist: the working va_list.
+
+ * Return: void.
+
+ */
+
+void print_afloat(va_list *valist)
+
+{
+
+	printf("%f", va_arg(*valist, double));
+
+}
+
+
+
+/**
+
+ * print_achar_arr - prints the next char array in a va_list
+
+ * @valist: the working va_list.
+
+ * Return: void.
+
+ */
+
+void print_achar_arr(va_list *valist)
+
+{
+
+	char *s = va_arg(*valist, char *);
+
+
+
+	if (s == NULL)
+
+	{
+
+		printf("(nil)");
+
+		return;
+
+	}
+
+	printf("%s", s);
+
 }
