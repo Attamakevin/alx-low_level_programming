@@ -9,13 +9,13 @@
  */
 void print_all(const char * const format, ...)
 {
-	int num_args = strlen(format);
+	format = strlen(args);
 	va_list args;
 	int i;
 	char *str;
 
 	va_start(args, format);
-	for (i = 0; i < num_args; i++)
+	for (i = 0; i < format; i++)
 	{
 		if (format[i] == 'c')
 		{
