@@ -9,15 +9,17 @@
  */
 void print_all(const char * const format, ...)
 {
-	int num_arg = strlen(format);
+	int num_args = strlen(format);
 	va_list args;
+	int i;
+	char *str;
 
 	va_start(args, format);
 	for (i = 0; i < num_args; i++)
 	{
 		if (format[i] == 'c')
 		{
-			char x = va_arg(args, char);
+			char x = va_arg(args, int);
 			printf("%c", x);
 		}
 		else if (format[i] == 'i')
@@ -32,14 +34,15 @@ void print_all(const char * const format, ...)
 		}
 		else if (format[i] == 's')
 		{
-			char str = va_arg(args, char *);
+			str = va_arg(args, char *);
 			printf("%s", str);
 				if (str == NULL)
 					printf("(nil)");
 		}
 		else 
 		{
-			return (NULL);
+			continue;
 		}
 	printf("\n");
+	}
 }
