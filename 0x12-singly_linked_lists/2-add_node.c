@@ -8,10 +8,10 @@
 * @s: string parameter
 * Return: return length of string
 */
-int _strlen(const char *s)  
+int _strlen(const char *s)
 {
 	int i;
-	
+
 	i = 0;
 	while (s[i] != '\0')
 	{
@@ -23,7 +23,7 @@ return (i);
 /**
 * add_node - function to add a string at the beginning of list_t
 * @str: string parameter
-* @*head: pointer to the first node in the list
+* @head: pointer to the first node in the list
 * Return: return updated list_t
 */
 
