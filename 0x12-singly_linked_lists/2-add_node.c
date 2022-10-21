@@ -11,10 +11,15 @@
 int _strlen(const char *s)  
 {
 	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-	return (i);
+	
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+return (i);
 }
+
 /**
 * add_node - function to add a string at the beginning of list_t
 * @str: string parameter
@@ -27,7 +32,7 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *newnode;
 
 	newnode = malloc(sizeof(list_t));
-	while (newnode)
+	if (newnode)
 	{
 		newnode->str = strdup(str);
 		newnode->len = _strlen(str);
