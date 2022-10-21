@@ -8,7 +8,7 @@
 * @s: string parameter
 * Return: return length of string
 */
-int _strlen(const chat *s)  
+int _strlen(const char *s)  
 {
 	int i;
 
