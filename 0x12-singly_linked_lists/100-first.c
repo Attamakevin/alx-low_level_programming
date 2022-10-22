@@ -1,5 +1,5 @@
 #include <stdio.h>
-void printbeforemain(void)_attribute_ ((constructor));
+void printbeforemain(void)__attribute__ ((constructor));
 /**
 * printbeforemain - a function to print lines before main
 * return: void
