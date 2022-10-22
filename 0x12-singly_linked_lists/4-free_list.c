@@ -14,7 +14,7 @@ void free_list(list_t *head)
 
 {
 
-	/*list_t *tmp;*/
+	list_t *tmp;
 
 
 
@@ -26,13 +26,13 @@ void free_list(list_t *head)
 
 	{
 
-		/*tmp = head->next;*/
+		tmp = head->next;
 
 		free(head->str);
 
 		free(head);
 
-		/*head = tmp;*/
+		head = tmp;
 
 	}
 
