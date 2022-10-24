@@ -7,11 +7,11 @@ Return: number of elements in the  list
 */
 size_t listint_len(const listint_t *h)
 {
-	int nodes = 1;
+	int nodes = 0;
 	{
 	while (h->next != NULL)
-	h = h->next;
 	nodes++;
+	h = h->next;
 	}
 	return (nodes);
 }
