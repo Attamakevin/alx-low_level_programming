@@ -4,20 +4,15 @@
 * add_nodeint_end - a function to add node to end of list
 * @head: pointer to the first node
 *@n: number of nodes
-* Return: newnode
+* Return: node
 */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-
 	listint_t *node, *last;
-
-
 
 	if (!head)
 
 		return (0);
-
-
 
 	node = malloc(sizeof(listint_t));
 
