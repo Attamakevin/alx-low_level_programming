@@ -8,14 +8,26 @@ Return: updated list on success or zero if failed
 */
 int pop_listint(listint_t **head)
 {
-	listint_t *tmp;
 
-	if (*head == 0 || head == 0)
+	listint_t *second;
+
+	int data;
+
+
+
+	if (!head || !*head)
+
 		return (0);
-	else
-	tmp = (*head)->next;
+
+	data = (*head)->n;
+
+	second = (*head)->next;
+
 	(*head)->next = 0;
+
 	free(*head);
-	*head = tmp;
-return ((*head)->n);
+
+	*head = second;
+
+	return (data);
 }
