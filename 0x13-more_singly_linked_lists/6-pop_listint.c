@@ -4,7 +4,7 @@
 * pop_listint - a function to delete
 * node from begining of a list
 * @head: head pointer
-Return: head node
+* Return: head node
 */
 int pop_listint(listint_t **head)
 {
