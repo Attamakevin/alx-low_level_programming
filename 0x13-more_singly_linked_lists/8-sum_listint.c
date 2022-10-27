@@ -21,5 +21,4 @@ if (!head)
 	}
 	return (sum);
 }
-		
 
