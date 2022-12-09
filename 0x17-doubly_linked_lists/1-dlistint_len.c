@@ -6,16 +6,16 @@
 */
 size_t dlistint_len(const dlistint_t *h)
 {
- size_t i;
+size_t i;
 const dlistint_t *temp = h;
 
- if (!h || h == 0)
+if (!h || h == 0)
 	return (0);
- i = 0;
+i = 0;
 while (temp)
 {
 	temp = temp->next;
 	i++;
 }
-return (i);	
+return (i);
 }
