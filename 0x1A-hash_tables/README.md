@@ -1,3 +1,7 @@
+![image](https://user-images.githubusercontent.com/111025849/211178336-6cf2aabd-2fe6-4587-a986-a612fa16e38d.png)
+
+
+
 0x1A. C - Hash tables
 
 Learning Objectives
