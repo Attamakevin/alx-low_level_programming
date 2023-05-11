@@ -11,25 +11,19 @@ int binary_search(int *array, size_t size, int value)
 size_t start = 0, ending = size - 1, i, mid;
 
 	if (array == NULL)
-	{
 		return (-1);
-	}
 	mid = (start + ending) / 2;
 	printf("Searching in array: ");
 	for (i = 0; i <= ending; i++)
 	{
-		printf("%d", array[i]);
-		if (i < ending)
-			printf(", ");
+		printf("%i%s", array[i], i == ending ? "\n" : ", ");
 	}
-	printf("\n");
 	while (start < ending)
 	{
 		if (array[mid] == value)
 		{
 			return (mid);
-			printf("Found %d at index %ld:", value, mid);
-			printf("\n");
+			printf("Found %d at index %ld:\n", value, mid);
 		}
 		else if (array[mid] < value)
 		{
@@ -37,11 +31,8 @@ size_t start = 0, ending = size - 1, i, mid;
 			printf("Searching in array: ");
 			for (i = start; i <= ending; i++)
 			{
-				printf("%d", array[i]);
-				if (i < ending)
-					printf(", ");
+				printf("%i%s", array[i], i == ending ? "\n" : ", ");
 			}
-			printf("\n");
 			mid = (start + ending) / 2;
 		}
 		else if (array[mid] > value)
@@ -51,11 +42,8 @@ size_t start = 0, ending = size - 1, i, mid;
 			printf("Searching in array: ");
 			for (i = start; i <= ending; i++)
 			{
-				printf("%d", array[i]);
-				if (i < ending)
-					printf(", ");
+				printf("%i%s", array[i], i == ending ? "\n" : ", ");
 			}
-			printf("\n");
 			mid = (start + ending) / 2;
 		}
 	}
